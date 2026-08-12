@@ -1,338 +1,315 @@
-# 📊 Business Insights Documentation
+# Business Insights
 
-## Power BI Sales Analytics & Business Intelligence Project
+## 1. Executive Summary
 
----
+This Power BI Sales Analytics project analyzes overall sales performance, sales growth, customer behavior, and product performance across multiple years, countries, categories, customers, and products.
 
-# 1. Document Overview
+The analysis is based on the Gold Layer data model and is presented through three interactive dashboard pages:
 
-This document contains the key business insights identified from the SQL Exploratory Data Analysis (EDA) and Power BI Sales Analytics project.
-
-The purpose of this document is to convert technical SQL analysis and Power BI visualizations into clear, business-oriented findings that can support data-driven decision-making.
-
-The analysis is based on the Gold Layer of the SQL Server Data Warehouse:
-
-- `gold.fact_sales`
-- `gold.dim_customers`
-- `gold.dim_products`
-
-The Power BI solution extends the SQL EDA analysis through:
-
-- Interactive dashboards
-- DAX measures
-- Time intelligence
-- Customer analysis
-- Product analysis
-- Ranking
-- Segmentation
-- Dynamic filtering
-- Drill-down analysis
+- Executive Overview
+- Sales Performance Analysis
+- Customer & Product Analysis
 
 ---
 
-# 2. Business Objective
+# 2. Overall Business Performance
 
-The primary objective is to understand:
+## Key Metrics
 
-- Overall sales performance
-- Customer behavior
-- Product performance
-- Sales trends over time
-- Revenue contribution
-- Customer and product segments
-- Top and bottom performers
-- Growth and performance patterns
+| KPI | Value |
+|---|---:|
+| Total Sales | 29.4M |
+| Total Orders | 28K |
+| Total Customers | 18K |
+| Total Products | 295 |
+| Total Quantity | 60K |
+| Average Order Value | 1.06K |
 
-The final goal is to convert these findings into actionable business recommendations.
+### Key Findings
 
----
+- The business generated approximately **29.4M in total sales**.
+- Approximately **28K orders** were processed.
+- The business served approximately **18K customers**.
+- The product portfolio contains **295 products**.
+- Approximately **60K units** were sold.
+- The overall **Average Order Value (AOV)** is approximately **1.06K**.
 
-# 3. Insight Categories
+### Business Interpretation
 
-The project focuses on the following major insight areas:
-
-```text
-Business Insights
-│
-├── Executive Performance
-├── Sales Analysis
-├── Customer Analysis
-├── Product Analysis
-├── Time-Based Analysis
-├── Geographic Analysis
-├── Ranking Analysis
-├── Contribution Analysis
-├── Segmentation
-├── Performance Analysis
-└── Business Recommendations
-```
----
-
-## 4. Executive Business Insights
-
-The executive analysis provides a high-level overview of the business.
-
-- Key KPIs
-
-The Power BI Executive layer should monitor:
- 
-- Total Revenue
-- Total Orders
-- Total Customers
-- Active Customers
-- Total Products
-- Total Quantity Sold
-- Average Order Value
-- Average Selling Price
-- Revenue per Customer
-- Executive Questions
-
-The dashboard should answer:
-
-- How much revenue has the business generated?
-- How many customers are actively purchasing?
-- How many orders have been placed?
-- What is the average order value?
-- How much quantity has been sold?
-- Which products and categories drive the business?
+The business demonstrates a broad customer and product base with substantial sales volume. The 1.06K average order value provides a useful benchmark for evaluating order-level revenue performance and identifying opportunities to increase customer order value.
 
 ---
 
-## 5. Sales Insights
+# 3. Sales Performance Analysis
 
-Sales analysis focuses on overall revenue generation and sales performance.
+## 3.1 Sales Trend Over Time
 
-Key Analysis
-- Total Revenue
-- Revenue by Year
-- Revenue by Month
-- Revenue by Quarter
-- Revenue by Category
-- Revenue by Product
-- Revenue by Country
-- Revenue by Customer
+The Sales Trend Over Time visualization shows noticeable variation in monthly sales throughout the analyzed period.
 
-Business Questions
+### Key Findings
 
-- What is the overall sales performance?
-- Which period generated the highest revenue?
-- Which category contributes the most revenue?
-- Which products generate the highest sales?
-- Which countries generate the highest revenue?
+- Sales increased from the early period and reached several higher-performing months.
+- The trend shows fluctuations rather than a continuously increasing pattern.
+- A noticeable sales peak occurs around the middle portion of the timeline.
+- Sales subsequently decline and recover during later periods.
 
-Expected Business Insight
+### Business Interpretation
 
-The analysis should identify the major revenue-generating areas of the business and highlight areas requiring management attention.
+Sales performance is influenced by changes across individual months and years. This indicates that sales should be monitored at a monthly level to identify strong periods, weaker periods, and potential seasonal or business-cycle patterns.
 
 ---
 
-## 6. Sales Trend Insights
+# 4. Year-over-Year Sales Performance
 
-Time-based analysis is used to identify business trends.
+The Sales vs Previous Year and Sales YoY Growth Trend visuals provide a year-level and monthly comparison of sales performance.
 
-Analysis Includes
-- Yearly Sales
-- Quarterly Sales
-- Monthly Sales
-- Year-over-Year Growth
-- Month-over-Month Growth
-- Running Total
-- Cumulative Revenue
-Business Questions
-- Is revenue increasing or decreasing?
-- Which year performed best?
-- Which months show strong sales?
-- Are there recurring seasonal patterns?
-- Is the business experiencing sustained growth?
+### Key Findings
 
-Insight Framework
-```
-Sales Trend
-     │
-     ├── Growing
-     │
-     ├── Stable
-     │
-     └── Declining
-```
+- **2011** recorded approximately **7.1M** in sales.
+- **2012** recorded approximately **5.8M** in sales.
+- **2013** recorded approximately **16.3M** in sales.
+- 2013 represents a significant improvement compared with 2012.
+- The YoY Growth Trend shows negative growth during several earlier periods before moving into positive territory during later periods.
+- The Sales Performance page reports an overall **Sales YoY Growth of 112%** under the current dashboard context.
 
-The final dashboard should highlight significant increases or decreases rather than simply displaying raw sales values.
+### Business Interpretation
+
+The strongest visible year-level performance occurs in **2013**, with approximately 16.3M in sales. The increase from 5.8M in 2012 to 16.3M in 2013 represents a major improvement in annual sales performance.
+
+This suggests that the business experienced a significant growth phase in 2013 and that the factors behind this improvement should be investigated further.
 
 ---
 
-## 7. Customer Insights
+# 5. Cumulative Sales Performance
 
-Customer analysis identifies the customers who contribute most to the business.
+The Cumulative Sales Performance visualization tracks the running sales total over the selected time period.
 
-Key Metrics
-- Total Customers
-- Active Customers
-- Orders per Customer
-- Revenue per Customer
-- Customer Revenue
-- Customer Rank
-- Customer Segment
+### Key Findings
 
-Analysis Includes
+- Cumulative sales increase as sales accumulate over time.
+- The visualization provides a clear view of the overall sales accumulation pattern.
+- The later periods contribute to the final cumulative sales position.
 
-- Revenue by Customer
-- Customers by Country
-- Customers by Gender
-- Customer Purchase Frequency
-- Top Customers
-- Low-Value Customers
-- Customer Segmentation
+### Business Interpretation
 
-Business Questions
-- Who are the highest-value customers?
-- Which customers contribute the most revenue?
-- Which customers place the most orders?
-- Which customers purchase infrequently?
-- Which customers may require retention strategies?
+Cumulative sales analysis is useful for monitoring progress toward revenue targets and evaluating how quickly sales accumulate throughout the year.
 
 ---
 
-## 8. Customer Segmentation Insights
+# 6. Sales by Country
 
-Customers are segmented according to their purchasing behavior and revenue contribution.
+## Key Findings
 
-Example Segments
-```
-| Segment      | Business Meaning                                   |
-| ------------ | -------------------------------------------------- |
-| High Value   | Customers generating significant revenue           |
-| Medium Value | Customers with moderate revenue contribution       |
-| Low Value    | Customers with relatively low revenue contribution |
+The Executive Overview identifies the following major country-level sales contributions:
 
-```
-Business Applications
-High-value customers can be targeted for:
+| Country | Sales |
+|---|---:|
+| United States | 9.2M |
+| Australia | 9.1M |
+| United Kingdom | 3.4M |
+| Germany | 2.9M |
+| France | 2.6M |
+| Canada | 2.0M |
 
-- Loyalty programs
-- Personalized offers
-- Premium products
-- Retention campaigns
+### Business Interpretation
 
-Medium-value customers can be targeted for:
+The **United States and Australia** are the strongest markets, contributing approximately **9.2M** and **9.1M** respectively.
 
-- Cross-selling
-- Upselling
-- Promotional campaigns
+Together, these two markets represent the majority of the visible country-level sales contribution, making them strategically important markets for maintaining revenue performance.
 
-Low-value customers can be targeted for:
+The United Kingdom, Germany, France, and Canada contribute smaller but meaningful portions of total sales.
 
-- Re-engagement campaigns
-- Introductory offers
-- Product recommendations
+### Business Recommendation
 
-Segmentation thresholds should be finalized after reviewing the actual revenue distribution in the dataset.
+- Maintain strong customer and sales activity in the United States and Australia.
+- Investigate opportunities to increase sales in the United Kingdom, Germany, France, and Canada.
+- Compare customer acquisition, product mix, and order value across countries to identify growth opportunities.
 
 ---
 
-## 9. Product Insights
+# 7. Sales by Product Category
 
-Product analysis identifies the products and categories responsible for business performance.
+## Key Findings
 
-Key Metrics
-- Product Revenue
-- Quantity Sold
-- Average Selling Price
-- Product Rank
-- Product Revenue Contribution
-- Product Segment
+| Category | Sales |
+|---|---:|
+| Bikes | 28.3M |
+| Accessories | 0.7M |
+| Clothing | 0.3M |
 
-Analysis Includes
-- Revenue by Product
-- Quantity by Product
-- Revenue by Category
-- Revenue by Sub-Category
-- Top Products
-- Bottom Products
-- Product Contribution
+### Business Interpretation
 
-Business Questions
-- Which products generate the highest revenue?
-- Which products sell the highest quantity?
-- Which products have low revenue?
-- Which categories dominate sales?
--Which products require management attention?
+The **Bikes category dominates the business**, generating approximately **28.3M** in sales.
+
+Accessories and Clothing contribute significantly smaller amounts compared with Bikes.
+
+This indicates a highly concentrated category revenue structure.
+
+### Business Recommendation
+
+The business should:
+
+- Continue protecting the strong performance of the Bikes category.
+- Explore cross-selling Accessories and Clothing with Bike purchases.
+- Investigate whether the lower-performing categories have pricing, product mix, inventory, or customer-demand opportunities.
 
 ---
 
-## 10. Dashboard-Based Insights
+# 8. Customer Analysis
 
-The Power BI project will contain three primary analytical dashboards.
+## 8.1 Customer Base
 
-```
-                 POWER BI ANALYTICS
-                        │
-        ┌───────────────┼───────────────┐
-        ▼               ▼               ▼
-      SALES          CUSTOMER         PRODUCT
-    DASHBOARD       DASHBOARD        DASHBOARD
-        │               │               │
-        └───────────────┼───────────────┘
-                        ▼
-                EXECUTIVE VIEW
-```
+The dashboard reports:
+
+- **18K Total Customers**
+- **18K Active Customers**
+
+This indicates that the current dashboard context contains a large active customer base.
 
 ---
 
-## 11. Final Objective
-The purpose of this project is not simply to create dashboards.
+## 8.2 Top Customers by Revenue
 
-The objective is to build an analytical solution that connects:
-```
-DATA
- ↓
-SQL EDA
- ↓
-DAX
- ↓
-VISUALIZATION
- ↓
-INSIGHTS
- ↓
-BUSINESS DECISIONS
-```
+The Top 10 Customers by Revenue visualization identifies several high-value customers.
 
-The final Power BI solution should enable business users to quickly identify:
+The visible leading customers include:
 
-- Growth opportunities
-- Revenue drivers
-- Customer value
-- Product performance
-- Market opportunities
-- Business risks
-- Performance trends
+| Customer | Revenue |
+|---|---:|
+| Morgan | 145.0K |
+| Ian | 137.7K |
+| Jennifer | 134.7K |
+| Chloe | 132.0K |
+| Kaitlyn | 130.3K |
+| Eduardo | 127.6K |
+| Dalton | 122.0K |
+
+### Business Interpretation
+
+The top customers generate substantial individual revenue, with the highest visible customer contributing approximately **145K**.
+
+The Top 5 Customer Revenue Contribution visualization shows that the top five customers have relatively similar revenue levels, rather than one customer overwhelmingly dominating the top-five group.
+
+### Business Recommendation
+
+- Maintain strong relationships with high-value customers.
+- Identify the characteristics of high-revenue customers.
+- Develop customer segmentation strategies to move medium-value customers toward higher order value and purchase frequency.
+- Monitor high-value customers for retention opportunities.
 
 ---
 
+# 9. Product Analysis
 
-## 🎯 Final Outcome ##
-The completed project will demonstrate an end-to-end analytics workflow:
-```
-SQL SERVER DATA WAREHOUSE
-            ↓
-        GOLD LAYER
-            ↓
-      SQL EDA PROJECT
-            ↓
-     BUSINESS ANALYSIS
-            ↓
-      POWER BI MODEL
-            ↓
-        DAX LAYER
-            ↓
-     SALES DASHBOARD
-            ↓
-   CUSTOMER DASHBOARD
-            ↓
-    PRODUCT DASHBOARD
-            ↓
-    BUSINESS INSIGHTS
-            ↓
-   ACTIONABLE DECISIONS
-   ```
-   ## The goal is to transform data into insights, and insights into business decisions.
-   ---
+## 9.1 Top Products by Revenue
+
+The Top 10 Products by Revenue visualization shows that several products generate more than 1M in sales.
+
+Visible leading products include:
+
+- Mountain-200 Black — approximately 1.37M
+- Mountain-200 Black — approximately 1.36M
+- Mountain-200 Silver — approximately 1.34M
+- Mountain-200 Silver — approximately 1.30M
+- Mountain-200 Black — approximately 1.29M
+- Mountain-200 Silver — approximately 1.26M
+- Road-150 Red-48 — approximately 1.21M
+
+### Business Interpretation
+
+The highest-performing products are primarily from the **Mountain-200** product family, indicating strong revenue contribution from this product line.
+
+### Business Recommendation
+
+- Maintain availability of high-performing products.
+- Monitor inventory and demand for top-selling products.
+- Analyze why Mountain-200 products perform strongly.
+- Identify opportunities to cross-sell complementary Accessories and Clothing.
+
+---
+
+# 10. Product Category Performance
+
+The Sales by Product Category visualization confirms that:
+
+- Bikes are the dominant revenue-generating category.
+- Accessories generate a much smaller contribution.
+- Clothing contributes the smallest visible sales amount.
+
+This reinforces the importance of Bikes to overall business revenue.
+
+---
+
+# 11. Key Business Insights
+
+### Insight 1 — Strong Overall Revenue
+
+The business generated approximately **29.4M** in total sales across approximately **28K orders**.
+
+### Insight 2 — Bikes Drive the Business
+
+Bikes generated approximately **28.3M**, making them the dominant sales category.
+
+### Insight 3 — United States and Australia Are Core Markets
+
+The United States generated approximately **9.2M**, while Australia generated approximately **9.1M**.
+
+### Insight 4 — 2013 Was a Strong Sales Year
+
+2013 generated approximately **16.3M**, substantially higher than the approximately **5.8M** recorded in 2012.
+
+### Insight 5 — High-Value Products Are Concentrated
+
+Several of the highest-revenue products belong to the **Mountain-200** product family.
+
+### Insight 6 — High-Value Customers Contribute Meaningful Revenue
+
+The highest visible customers generated more than **120K** each, highlighting a valuable high-revenue customer segment.
+
+### Insight 7 — Revenue Is Highly Category Concentrated
+
+The overwhelming majority of visible sales come from the Bikes category, creating both a strength and a potential concentration risk.
+
+---
+
+# 12. Business Recommendations
+
+## 1. Strengthen Core Markets
+
+Continue investing in the United States and Australia while identifying growth opportunities in other markets.
+
+## 2. Protect the Bikes Category
+
+Because Bikes generate the majority of revenue, inventory availability, pricing, and customer experience for this category should remain a priority.
+
+## 3. Increase Cross-Selling
+
+Use Bike purchases as an opportunity to increase Accessories and Clothing sales through bundles and complementary-product recommendations.
+
+## 4. Retain High-Value Customers
+
+Develop targeted retention strategies for customers generating high revenue.
+
+## 5. Promote High-Performing Products
+
+Ensure strong inventory availability and marketing support for high-performing products, particularly the Mountain-200 product family.
+
+## 6. Investigate 2013 Growth
+
+The significant increase in sales during 2013 should be investigated to identify the underlying drivers and determine whether similar strategies can be replicated.
+
+## 7. Monitor Monthly Sales Trends
+
+Monthly sales fluctuations should be monitored regularly to identify recurring patterns, weak periods, and opportunities for better sales planning.
+
+---
+
+# 13. Final Business Conclusion
+
+The analysis shows a business with strong overall sales performance, a large customer base, and a broad product portfolio.
+
+Revenue is primarily driven by the **Bikes category**, with the **United States and Australia** representing the strongest visible markets. The business also has a group of high-value customers and high-performing products that contribute significantly to revenue.
+
+The most significant year-level performance is visible in **2013**, where sales reached approximately **16.3M**.
+
+The key strategic opportunity is to **protect the strong Bike and core-market performance while expanding Accessories and Clothing sales, retaining high-value customers, and identifying the factors responsible for the strong 2013 growth.**
